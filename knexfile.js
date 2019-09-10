@@ -9,6 +9,11 @@ module.exports = {
     },
     migrations: {
       directory: './data/migrations'
+    },
+    pool: {
+      afterCreate: (conn, done) => {
+        conn.runn('PRAGMA foreign_keys = ON', done);
+      }
     }
   },
 };
