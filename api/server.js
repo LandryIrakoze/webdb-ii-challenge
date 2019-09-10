@@ -14,4 +14,8 @@ server.use(express.json());
 
 server.use('/api/cars', carsRouter);
 
+server.get('/', (req, res) => {
+    res.send({ message: 'api up...' })
+})
+
 module.exports = server;
