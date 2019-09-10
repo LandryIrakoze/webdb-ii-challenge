@@ -3,6 +3,7 @@ const helmet = require('helmet');
 const cors = require('cors');
 const morgan = require('morgan');
 
+const salesRouter = require('../routes/sales/salesRouter');
 const carsRouter = require('../routes/cars/carsRouter');
 
 const server = express();
